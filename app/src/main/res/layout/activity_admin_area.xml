@@ -34,5 +34,16 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView" />
 
+    <TextView
+        android:id="@+id/tvDeleteTeacherLink"
+        android:layout_width="wrap_content"
+        android:text="Eliminar Profesor"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvRegisterTeacherLink"
+        android:layout_alignLeft="@+id/tvRegisterTeacherLink"
+        android:layout_alignStart="@+id/tvRegisterTeacherLink" />
+
 
 </RelativeLayout>
