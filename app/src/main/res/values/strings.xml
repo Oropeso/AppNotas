@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AppNotas</string>
+
+    <string name="opcion_prompt">Selecciona el tipo</string>
+
+    <string-array name="opcion_arrays">
+        <item>Profesor</item>
+        <item>Secretaria</item>
+    </string-array>
+
+</resources>
