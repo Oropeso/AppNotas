@@ -1,4 +1,4 @@
-package com.example.oropesa.appnotas;
+package com.example.oropesa.appnotas.java;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -13,11 +13,12 @@ import android.widget.TextView;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
+import com.example.oropesa.appnotas.database.LoginRequest;
+import com.example.oropesa.appnotas.R;
+import com.example.oropesa.appnotas.database.UserAreaActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
     @Override

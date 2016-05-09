@@ -1,15 +1,13 @@
-package com.example.oropesa.appnotas;
+package com.example.oropesa.appnotas.database;
 
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
+import android.app.NotificationManager;
+import android.content.Context;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 
@@ -24,10 +22,15 @@ public class RegisterRequestTeacher extends StringRequest {
     public RegisterRequestTeacher(String username, String name, String password, String type, Response.Listener<String> listener) {
         super(Request.Method.POST, REGISTER_REQUEST_URL, listener, null);
         params = new HashMap<>();
-        params.put("username", username);
-        params.put("name", name);
-        params.put("password", password);
-        params.put("type", type.toLowerCase());
+        if((username.isEmpty() || name.isEmpty() || password.isEmpty()) || type.isEmpty()){
+           //Crear mensaje de alerta (No context)
+        }else{
+            params.put("username", username);
+            params.put("name", name);
+            params.put("password", password);
+            params.put("type", type.toLowerCase());
+        }
+
     }
 
     @Override

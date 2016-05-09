@@ -1,42 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:padding="10dp"
-    android:layout_height="match_parent">
+    android:padding="@dimen/activity_horizontal_margin"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:baselineAligned="true">
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:text="Usuario"
-        android:layout_height="wrap_content" />
-
-    <EditText
-        android:id="@+id/etUsername"
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_marginBottom="10dp"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.EditText">
+        <TableRow>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:id="@+id/icono_user"
+            android:src="@drawable/ic_action_user"
+            android:background="@null"/>
 
+        <EditText
+            android:id="@+id/etUsername"
+            android:hint="Usuario"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/icono_user"
+            android:background="@null"
+            android:layout_centerVertical="true"/>
+        </TableRow>
+    </TableLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:text="Contraseña"
-        android:layout_height="wrap_content" />
-
-    <EditText
-        android:id="@+id/etPassword"
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_marginBottom="10dp"
-        android:inputType="textPassword"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.EditText">
+        <TableRow>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:id="@+id/icono_password"
+                android:src="@drawable/ic_https"
+                android:background="@null"
+                android:layout_alignParentEnd="true" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:hint="Contraseña"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/icono_password"
+            android:background="@null"
+            android:layout_centerVertical="true"
+            android:inputType="textPassword"
+            android:password="true"/>
+        </TableRow>
+    </TableLayout>
 
     <Button
         android:id="@+id/bLogin"
-        android:text="Iniciar sesión"
         android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Iniciar Sesión"
+        android:clickable="false"
+        android:background="#859dff" />
 
     <TextView
         android:id="@+id/tvRegisterLink"
